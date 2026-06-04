@@ -1,0 +1,23 @@
+/* gruvbox dark
+* https://github.com/morhetz/gruvbox
+* base16: https://github.com/dawikur/base16-gruvbox-scheme
+*/
+
+:root {
+  --base00: #242321;
+  --base01: #2d2b28;
+  --base02: #3a3732;
+  --base03: #746b5d;
+  --base04: #a89984;
+  --base05: #e8e8e0;
+  --base06: #ead8b4;
+  --base07: #f6e7bf;
+  --base08: #e46b5d;
+  --base09: #e59f4d;
+  --base0A: #e9c46a;
+  --base0B: #a7c957;
+  --base0C: #8ec07c;
+  --base0D: #d8a657;
+  --base0E: #d3869b;
+  --base0F: #c65d35;
+}

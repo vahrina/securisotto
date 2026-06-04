@@ -1,0 +1,95 @@
+/* Override this file to customise the theme's CSS for your site */
+:root {
+  --trans: 240ms cubic-bezier(.41,.1,.67,.97);
+  --content-width: 52rem;
+  --page-pad: 1rem;
+}
+
+* {
+  cursor: crosshair;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+}
+
+body {
+  font-family: monospace;
+  user-select: none;
+  text-transform: lowercase;
+}
+
+::-webkit-scrollbar { width: 0.5rem; }
+::-webkit-scrollbar-track { background: var(--base00); }
+::-webkit-scrollbar-thumb { background: var(--base03); }
+
+a.page__logo-inner:hover {
+  background: var(--base06);
+}
+
+a,
+a.page__logo-inner,
+button,
+input,
+select,
+textarea {
+  transition: all var(--trans);
+}
+
+.nav-main-item {
+  text-decoration: none;
+}
+
+.active {
+  text-decoration: underline;
+}
+
+.content__body table {
+  border-collapse: collapse;
+  display: block;
+  width: fit-content;
+  margin-inline: auto;
+  padding: 1rem;
+}
+
+.content__body th,
+.content__body td {
+  border: 2px solid var(--base03);
+  padding: .4rem .6rem;
+}
+
+.content__body th {
+  background: var(--base02);
+}
+
+.page__header,
+.page__body,
+.page__footer {
+  width: min(var(--content-width), 100%);
+  margin-inline: auto;
+}
+
+.page__body {
+  padding-block: 1.5rem calc(1rem - .6rem);
+}
+
+.content__body pre,
+.content__body .page-banner,
+.content__body .page-transfer,
+.content__body .highlight pre {
+  margin: 1rem 0 0 0;
+  padding: .5rem .75rem;
+  background: var(--base00) !important;
+  border-radius: .3rem;
+}
+
+@media (min-width: 45rem) {
+  .page {
+    grid-template-areas:
+      "header"
+      "body"
+      "footer";
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

@@ -1,0 +1,17 @@
+.page {
+  min-height: calc(100vh - 2rem);
+  grid-template-rows: auto 1fr auto;
+}
+
+.page__footer {
+  align-self: end;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  min-height: 1.5rem;
+  color: var(--off-fg);
+}
+
+.page__footer p {
+  margin: 0;
+}

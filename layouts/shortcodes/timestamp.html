@@ -1,0 +1,7 @@
+{{- $date := .Get 0 -}}
+{{- if $date -}}
+  {{- $t := time $date -}}
+  {{- $t.Format "02-01-2006 15:04" -}}
+{{- else -}}
+  {{- now.UTC.Format "02-01-2006 15:04" -}}
+{{- end -}}

@@ -1,0 +1,12 @@
+{{- $name := path.Base .Page.File.Path -}}
+{{- $words := len (findRE `\S+` .Page.RawContent) -}}
+{{- $seconds := int (math.Ceil (math.Max 1.0 (div (float $words) 3.0))) -}}
+{{- $eta := cond (lt $seconds 60) (printf "%ds" $seconds) (cond (eq (mod $seconds 60) 0) (printf "%dm" (div $seconds 60)) (printf "%dm%02ds" (div $seconds 60) (mod $seconds 60))) -}}
+{{- $size := 0 -}}
+{{- with .Page.File -}}{{- with os.Stat (path.Join "content" .Path) -}}
+  {{- $size = .Size -}}{{- end -}}{{- end -}}
+{{- $sizeStr := cond (ge $size 1048576) (printf "%.1fM" (div (float $size) 1048576)) (cond (ge $size 1024) (printf "%.1fK" (div (float $size) 1024)) (printf "%dB" $size)) -}}
+
+<pre class="page-transfer">{{ $name }}    100% [===================>]   --K/s in   {{ $eta }}
+{{ now.UTC.Format "02-01-2006 15:04" }} - '{{ $name }}' saved [{{ $sizeStr }}/{{ $sizeStr }}]
+</pre>
