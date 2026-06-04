@@ -1,14 +1,9 @@
 baseURL = "https://security-day.hs-offenburg.de"
 theme = "risotto"
 title = "Security Day 2026"
-author = ""
-copyright = ""
 enableInlineShortcodes = true
 ignoreErrors = ["error-remote-getjson"]
 sectionPagesMenu = "main"
-
-[pagination]
-pagerSize = 3
 
 [params]
 noindex = false
@@ -16,18 +11,7 @@ noindex = false
 [params.theme]
 palette = "gruvbox-dark"
 
-[[params.socialLinks]]
-icon = "fa-brands fa-discord"
-title = "discord"
-url = "https://discord.gg/td2RfbxF7G"
-
-[[params.socialLinks]]
-icon = "fa-brands fa-github"
-title = "GitHub"
-url = "https://github.com/vahrina/secday"
-
 [menu]
-
   [[menu.main]]
     identifier = "overview"
     name = "overview"
@@ -49,28 +33,6 @@ url = "https://github.com/vahrina/secday"
 [markup.goldmark.renderer]
 unsafe = true
 
-[markup]
-  [markup.tableOfContents]
-    startLevel = 2
-    endLevel   = 3
-    ordered    = true
-
-[privacy]
-  [privacy.x]
-    disabled = false
-    enableDNT = true
-    simple = true
-
-  [privacy.instagram]
-    disabled = false
-    simple = true
-
   [privacy.youtube]
     disabled = false
     privacyEnhanced = true
-
-[services]
-  [services.instagram]
-    disableInlineCSS = true
-  [services.x]
-    disableInlineCSS = true
