@@ -12,7 +12,7 @@
             "title" .Title
             "eventname" .Params.eventname) }}
     {{ end }}
-    {{ range index site.Data "timeline-static" }}
+    {{ range index hugo.Data "timeline-static" }}
         {{ $events = $events | append . }}
     {{ end }}
     {{ $events = sort $events "date" }}
