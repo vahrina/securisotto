@@ -1,4 +1,4 @@
-baseURL = "https://securisotto-vah.wtf"
+baseURL = "https://securisotto.vah.wtf"
 theme = "risotto"
 title = "Security Day 2026"
 enableInlineShortcodes = true
